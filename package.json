@@ -1,0 +1,47 @@
+{
+  "name": "@owja/babel-css-inline-plugin",
+  "version": "1.0.0-alpha.0",
+  "description": "Babel plugin to inline css imports as string",
+  "source": "src/plugin.ts",
+  "main": "dist/plugin.js",
+  "module": "dist/plugin.mjs",
+  "types": "dist/plugin.d.ts",
+  "scripts": {
+    "build": "rm -rf dist/* && microbundle --format es,cjs --target node",
+    "test": "jest"
+  },
+  "keywords": [
+    "babel",
+    "css",
+    "inline",
+    "plugin",
+    "styles",
+    "stylesheets",
+    "build",
+    "parser"
+  ],
+  "author": "Hauke Broer",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/types": "^7.6.3",
+    "@types/cssnano": "^4.0.0",
+    "babel-plugin-tester": "^7.0.1",
+    "jest": "^24.9.0",
+    "microbundle": "^0.12.0-next.6",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  },
+  "browserslist": [
+    "node >= 12"
+  ],
+  "dependencies": {
+    "autoprefixer": "^9.7.1",
+    "cssnano": "^4.1.10",
+    "postcss": "^7.0.21"
+  },
+  "files": [
+    "/dist",
+    "!/dist/postcss"
+  ]
+}
