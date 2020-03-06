@@ -25,9 +25,9 @@ import styles from "./styles.css";
 const styles = "div{color:#333;display:flex;display:-webkit-flex}";
 ```
 
-## Why? How to use?
+## Why?
 
-This plugin is created to inline CSS into WebComponents with a ShadowRoot.
+This plugin is created to inline CSS into WebComponents with a ShadowRoot. 
 
 ```typescript
 import styles from "./my-component.css";
@@ -50,6 +50,45 @@ class MyComponent extends HTMLElement {
 
 Currently `autoprefixer` and `cssnano` are enabled. To configure the browsers to support simply add
 a `browserlist` property to the `package.  
+
+## Usage
+
+Install the plugin:
+
+```shell script
+npm install --save-dev @owja/babel-css-inline-plugin
+```
+
+Add the plugin to the Babel configuration:
+
+*babel.config.js*
+```javascript
+module.exports = {
+    plugins: ['module:@owja/babel-css-inline-plugin'],
+};
+```
+
+With TypeScript you have to add a definition file:
+
+*src/types/css.d.ts*
+```typescript
+declare module "*.css" {
+    const content: string;
+    export default content;
+}
+```
+
+Now you can import CSS files:
+
+```typescript
+import styles from "./my-styles.css";
+```
+
+which compiles to
+
+```javascript
+const styles = "<css styles>";
+```
 
 ## Notice
 
