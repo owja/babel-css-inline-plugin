@@ -8,7 +8,11 @@
   "types": "dist/plugin.d.ts",
   "scripts": {
     "build": "rm -rf dist/* && microbundle --format es,cjs --target node",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint --ext .ts ./src",
+    "lint:fix": "eslint --ext .ts ./src --fix",
+    "prettier": "prettier src/**/*.ts --check",
+    "prettier:fix": "prettier src/**/*.ts --write"
   },
   "keywords": [
     "babel",
@@ -29,14 +33,14 @@
     "@types/babel__traverse": "^7.0.9",
     "@types/cssnano": "^4.0.0",
     "@types/deasync": "^0.1.0",
-    "autoprefixer": "^9.7.4",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
     "babel-plugin-tester": "^8.0.1",
-    "cssnano": "^4.1.10",
+    "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.8.2",
     "jest": "^25.1.0",
     "microbundle": "^0.12.0-next.8",
-    "postcss": "^7.0.27",
-    "postcss-cli": "^7.1.0",
-    "prettier": "^1.19.1",
+    "prettier": "1.19.1",
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.3"
   },
@@ -46,12 +50,19 @@
     "CHROME > 20"
   ],
   "dependencies": {
-    "autoprefixer": "^9.7.1",
+    "autoprefixer": "^9.7.4",
     "cssnano": "^4.1.10",
-    "postcss": "^7.0.21"
+    "postcss-cli": "^7.1.0"
   },
   "files": [
     "/dist",
     "!/dist/postcss"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owja/ioc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/owja/ioc/issues"
+  }
 }
