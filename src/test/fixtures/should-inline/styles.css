@@ -1,3 +1,12 @@
 div {
-    color: blue;
+    color: #f0f0f0;
+    background-image: url("something.png");
+    font-family: "Roboto Condensed", monospace;
+}
+
+div {
+    display: grid;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+    transition: all .5s;
 }

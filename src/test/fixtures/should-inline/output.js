@@ -1,1 +1,1 @@
-const styles = "div{color:blue}";
+const styles = "div{color:#f0f0f0;background-image:url(something.png);font-family:Roboto Condensed,monospace;display:grid;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:-webkit-linear-gradient(top,#fff,#000);background:linear-gradient(180deg,#fff,#000);-webkit-transition:all .5s;transition:all .5s}";

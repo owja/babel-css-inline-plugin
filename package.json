@@ -1,7 +1,7 @@
 {
   "name": "@owja/babel-css-inline-plugin",
   "version": "1.0.0-alpha.0",
-  "description": "Babel plugin to inline css imports as string",
+  "description": "Babel plugin to inline CSS into JavaScript",
   "source": "src/plugin.ts",
   "main": "dist/plugin.js",
   "module": "dist/plugin.mjs",
@@ -23,17 +23,27 @@
   "author": "Hauke Broer",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/types": "^7.6.3",
+    "@babel/core": "^7.8.7",
+    "@babel/types": "^7.8.7",
+    "@types/babel__core": "^7.1.6",
+    "@types/babel__traverse": "^7.0.9",
     "@types/cssnano": "^4.0.0",
-    "babel-plugin-tester": "^7.0.1",
-    "jest": "^24.9.0",
-    "microbundle": "^0.12.0-next.6",
-    "ts-jest": "^24.1.0",
-    "typescript": "^3.6.4"
+    "@types/deasync": "^0.1.0",
+    "autoprefixer": "^9.7.4",
+    "babel-plugin-tester": "^8.0.1",
+    "cssnano": "^4.1.10",
+    "jest": "^25.1.0",
+    "microbundle": "^0.12.0-next.8",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
   },
   "browserslist": [
-    "node >= 12"
+    "IE > 9",
+    "FF > 20",
+    "CHROME > 20"
   ],
   "dependencies": {
     "autoprefixer": "^9.7.1",
