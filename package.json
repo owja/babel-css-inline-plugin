@@ -1,6 +1,6 @@
 {
   "name": "@owja/babel-css-inline-plugin",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "Babel plugin to inline CSS into JavaScript",
   "source": "src/plugin.ts",
   "main": "dist/plugin.js",
@@ -58,9 +58,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/owja/ioc.git"
+    "url": "git+https://github.com/owja/babel-css-inline-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/owja/ioc/issues"
+    "url": "https://github.com/owja/babel-css-inline-plugin/issues"
   }
 }
