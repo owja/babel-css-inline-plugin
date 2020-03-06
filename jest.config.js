@@ -11,6 +11,8 @@ module.exports = {
     coverageReporters: [
         "text-summary",
         "html",
+        "lcov",
+        "clover"
     ],
     coverageDirectory: "./coverage/",
     collectCoverage: true,
