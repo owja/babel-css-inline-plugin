@@ -25,18 +25,18 @@ pluginTester({
         },
         {
             title: "Should ignore files with none css extension",
-            code: "import something from \"json.json\";",
-            output: "import something from \"json.json\";"
+            code: 'import something from "json.json";',
+            output: 'import something from "json.json";'
         },
         {
             title: "Should ignore files without a specifier",
-            code: "import \"hello.css\";",
-            output: "import \"hello.css\";"
+            code: 'import "hello.css";',
+            output: 'import "hello.css";'
         },
         {
             title: "Should ignore module imports",
-            code: "import {what} from \"what.css\";",
-            output: "import { what } from \"what.css\";"
+            code: 'import {what} from "what.css";',
+            output: 'import { what } from "what.css";'
         }
     ]
 });
