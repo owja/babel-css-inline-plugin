@@ -1,13 +1,13 @@
 {
   "name": "@owja/babel-css-inline-plugin",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Babel plugin to inline CSS into JavaScript",
   "source": "src/plugin.ts",
   "main": "dist/plugin.js",
   "module": "dist/plugin.module.js",
   "types": "dist/plugin.d.ts",
   "scripts": {
-    "build": "shx rm -rf dist/* && microbundle --format es,cjs --target node",
+    "prepack": "shx rm -rf dist/* && microbundle --format es,cjs --target node",
     "test": "jest",
     "lint": "eslint --ext .ts ./src",
     "lint:fix": "eslint --ext .ts ./src --fix",
