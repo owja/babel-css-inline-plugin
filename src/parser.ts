@@ -1,5 +1,6 @@
 import {dirname, extname, resolve} from "path";
 import {existsSync} from "fs";
+import slash from "slash";
 
 // load the file, parse it and return the styles
 export function stylesheet(path: string, fileObject: any): void | string {
@@ -15,7 +16,7 @@ export function stylesheet(path: string, fileObject: any): void | string {
 
     try {
         return require('child_process')
-            .execSync(`npx -f -q postcss ${file} --use autoprefixer cssnano --no-map`)
+            .execSync(`npx -f -q postcss "${slash(file)}" --use autoprefixer cssnano --no-map`)
             .toString();
     } catch (e) {
         throw new Error(`The css file "${file}" could not parsed.`);
