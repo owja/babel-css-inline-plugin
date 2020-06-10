@@ -5,22 +5,24 @@ import {ImportDeclaration} from "@babel/types";
 import {stylesheet} from "./parser";
 
 // Main Babel Plugin Function
-export default function({types: t}: typeof babel): PluginObj {
+export default function ({types: t}: typeof babel): PluginObj {
     return {
         name: "css inline",
         visitor: {
             ImportDeclaration(path: NodePath<ImportDeclaration>, pass: any) {
-                if (path.node.specifiers.length !== 1 || path.node.specifiers[0].type !== "ImportDefaultSpecifier") return;
+                if (path.node.specifiers.length !== 1 || path.node.specifiers[0].type !== "ImportDefaultSpecifier") {
+                    return;
+                }
 
                 const styles = stylesheet(path.node.source.value, pass.file);
                 if (typeof styles !== "string") return;
 
-                const variableDeclaration = t.variableDeclaration('const', [
-                    t.variableDeclarator(path.node.specifiers[0].local, t.stringLiteral(styles))
+                const variableDeclaration = t.variableDeclaration("const", [
+                    t.variableDeclarator(path.node.specifiers[0].local, t.stringLiteral(styles)),
                 ]);
 
                 path.replaceWith(variableDeclaration);
-            }
-        }
+            },
+        },
     };
 }
