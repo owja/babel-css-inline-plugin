@@ -7,7 +7,7 @@
   "module": "dist/plugin.mjs",
   "types": "dist/plugin.d.ts",
   "scripts": {
-    "build": "rm -rf dist/* && microbundle --format es,cjs --target node",
+    "build": "shx rm -rf dist/* && microbundle --format es,cjs --target node",
     "test": "jest",
     "lint": "eslint --ext .ts ./src",
     "lint:fix": "eslint --ext .ts ./src --fix",
@@ -39,6 +39,7 @@
     "jest": "^26.0.1",
     "microbundle": "^0.12.0",
     "prettier": "2.0.5",
+    "shx": "^0.3.2",
     "slash": "^3.0.0",
     "ts-jest": "^26.1.0",
     "typescript": "^3.9.5"
