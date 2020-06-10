@@ -15,7 +15,7 @@ script:
     - npm run lint
     - npm run prettier
     - npm test
-    - npm run build
+    - npm run prepack
 
 after_script:
     - npm install -g codecov
