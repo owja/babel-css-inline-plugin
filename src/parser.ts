@@ -18,7 +18,7 @@ export function stylesheet(path: string, fileObject: any): void | string {
 
     try {
         return childProcess
-            .execSync(`npx -f -q postcss "${slash(file)}" --use autoprefixer cssnano --no-map`)
+            .execSync(`npx -f -q postcss "${slash(file)}" --use postcss-import autoprefixer cssnano --no-map`)
             .toString();
     } catch (e) {
         throw new Error(`The css file "${file}" could not parsed.`);
