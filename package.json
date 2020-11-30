@@ -1,6 +1,6 @@
 {
   "name": "@owja/babel-css-inline-plugin",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "Babel plugin to inline CSS into JavaScript",
   "source": "src/plugin.ts",
   "main": "dist/plugin.js",
