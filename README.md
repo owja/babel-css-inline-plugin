@@ -1,5 +1,14 @@
 # Babel CSS Inline Plugin
 
+# DEPRECATED!
+
+If possible use your bundler to inline CSS. This plugin was written before Microbundle implemented that feature. Webpack and Microbundle both support inlining CSS now.
+
+* [Microbundle](https://github.com/developit/microbundle) with flag `--css inline`
+* [Webpack](https://v4.webpack.js.org/loaders/raw-loader) with `raw-loader`
+
+---
+
 [![codecov](https://codecov.io/gh/owja/babel-css-inline-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/owja/babel-css-inline-plugin)
 [![Build Status](https://travis-ci.org/owja/babel-css-inline-plugin.svg?branch=master)](https://travis-ci.org/owja/babel-css-inline-plugin)
 [![npm version](https://badge.fury.io/js/%40owja%2Fbabel-css-inline-plugin.svg)](https://badge.fury.io/js/%40owja%2Fbabel-css-inline-plugin)
